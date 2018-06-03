@@ -30,4 +30,4 @@ const style = {
   }
 };
 // for making the compont avialable for other part of the ap
-export  { Header };
+export { Header };

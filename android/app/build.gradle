@@ -1,6 +1,7 @@
 apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
+import com.android.build.gradle.AppExtension
 
 /**
  * The react.gradle file registers a task for each build variant (e.g. bundleDebugJsAndAssets
@@ -93,9 +94,9 @@ def enableSeparateBuildPerCPUArchitecture = false
  */
 def enableProguardInReleaseBuilds = false
 
-android {
+final def extension = android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.auth"
@@ -135,6 +136,7 @@ android {
         }
     }
 }
+extension
 
 dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
@@ -147,4 +149,8 @@ dependencies {
 task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
+}
+
+android {
+    buildToolsVersion '27.0.3'
 }

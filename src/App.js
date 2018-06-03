@@ -1,11 +1,13 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import { Header } from './components/common';
 
 class App extends Component {
-    render()
-    {
+    render() {
     return (
+        
         <View>
+            <Header headerText="Authentication" />
             <Text> AN APp </Text>
             </View>
     );
